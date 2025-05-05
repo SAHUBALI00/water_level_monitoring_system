@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Water Level Monitoring</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 id="main-title">Water Level Monitoring System</h1>
+  </header>
+
+  <main class="container">
+    <!-- Tank 1 -->
+    <section class="tank" id="tank1">
+      <div class="tank-header">
+        <h2 class="tank-title">Tank 1</h2>
+        <p class="capacity-label">Total Capacity: 100%</p>
+         <!-- Input for user to update capacity -->
+  <div class="capacity-input">
+    <input type="number" id="capacity-input" placeholder="capacity(L)" min="1" max="100" />
+    <button onclick="updateCapacity()">Set</button>
+  </div>
+</div>
+      </div>
+
+      <div class="level-bars" id="level-bars-tank1">
+        <!-- 10 water level bars (bottom-up fill) -->
+        <div class="bar" id="bar-1"></div>
+        <div class="bar" id="bar-2"></div>
+        <div class="bar" id="bar-3"></div>
+        <div class="bar" id="bar-4"></div>
+        <div class="bar" id="bar-5"></div>
+        <div class="bar" id="bar-6"></div>
+        <div class="bar" id="bar-7"></div>
+        <div class="bar" id="bar-8"></div>
+        <div class="bar" id="bar-9"></div>
+        <div class="bar" id="bar-10"></div>
+      </div>
+
+      <div class="tank-details">
+          <p><strong>Status:</strong> <span id="status-tank1">Loading...</span></p>
+          <p><strong>Last Updated:</strong> <span id="timestamp-tank1">--:--</span></p>
+      </div>
+      <p>
+        <button id="update-status-btn" >Update DATA</button>
+      </p>
+      
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
